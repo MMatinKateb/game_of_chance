@@ -9,4 +9,5 @@ Run the following commands in program's directory in order to compile & run in a
 $ gcc -o game_of_chance game_of_chance.c
 $ sudo chown root:root./game_of_chance
 $ sudo chmod u+s./game_of_chance
-$./game_of_chance
+$ ./game_of_chance
+```
