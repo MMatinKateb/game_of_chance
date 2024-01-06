@@ -65,7 +65,7 @@ int main() {
                 else if(choice == 2)
                     player.current_game = dealer_no_match;
                 else
-                    player.current_game == find_the_ace;
+                    player.current_game = find_the_ace;
                 last_game = choice;     // and set last game.
             }
             play_the_game();
@@ -371,8 +371,8 @@ int find_the_ace() {
     print_cards("Dealing cards", cards, -1);
     pick = -1;
     while((pick < 1) || (pick > 3)) {   // Loop until valid pick is made.
-        printf("Select a card: 1, 2 or 3  ");
-        scanf("%d", pick);
+        printf("Select a card: 1, 2 or 3:  ");
+        scanf("%d", &pick);
     }
     pick--; // Adjust the pick since card numbering starts at 0.
     i=0;
@@ -385,7 +385,7 @@ int find_the_ace() {
         printf("Would you like to:\n[c]hange your pick\tor\t[i]ncrease your wager?\n");
         printf("select c or i:  ");
         choice_two = '\n';
-        while(choice_two == 'n')    // Flush extra newlines.
+        while(choice_two == '\n')    // Flush extra newlines.
             scanf("%c", &choice_two);
         if(choice_two == 'i') {     // Increase wager.
             invalid_choice=0;       // This is a valid choice.
