@@ -40,7 +40,7 @@ int main() {
 
     srand(time(0)); // Seed the randomizer with current time.
 
-    if(get_player_data() == 0)  // Try to read player data from file.
+    if(get_player_data() == -1)  // Try to read player data from file.
         register_new_player();  // If there is no data, register a new player.
 
     while(choice != 7) {
